@@ -1,0 +1,104 @@
+﻿<Window x:Class="BattleshipGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Морский бій" Height="730" Width="1127">
+    <Grid Margin="0,0,0,4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Margin="20,10,20,419" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="129"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Первое длинное текстовое поле -->
+            <TextBlock Text="Ім'я 1-го гравця:" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Height="16"/>
+            <TextBox x:Name="userName" Grid.Row="0" Grid.Column="1" Margin="10,5,100,5"/>
+
+
+            <!-- Первое короткое текстовое поле -->
+            
+            <TextBlock Text="Розмір поля:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0" Height="16"/>
+            <TextBox x:Name="sizeInput"  Grid.Row="2" Grid.Column="1" Margin="10,5,100,5"/>
+            
+
+
+            <!-- Кнопки -->
+            <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="1,10,0,0" Width="554">
+                <Button x:Name="save" Content="Зберегти" Width="115" Height="30" Margin="5" Click="save_Click"/>
+                <Button x:Name="open" Content="Відкрити" Width="115" Height="30" Margin="5" Click="open_Click"/>
+                <Button x:Name="reset" Content="Почати з початку" Width="115" Height="30" Margin="5" Click="reset_Click"/>
+            </StackPanel>
+        </Grid>
+        <!-- Поле игрока -->
+        <Grid x:Name="PlayerGrid" HorizontalAlignment="Left" Margin="20,180,0,0" VerticalAlignment="Top">
+            <Grid.RowDefinitions x:Uid="grd">
+                <!-- 10 строк -->
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!-- 10 столбцов -->
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <!-- Поле компьютера -->
+        <Grid x:Name="ComputerGrid" HorizontalAlignment="Left" Margin="600,180,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <!-- 10 строк -->
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!-- 10 столбцов -->
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Window>
